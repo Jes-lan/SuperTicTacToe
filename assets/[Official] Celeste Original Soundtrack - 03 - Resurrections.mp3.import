@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df4h5wtt2rse2"
+path="res://.godot/imported/[Official] Celeste Original Soundtrack - 03 - Resurrections.mp3-02b71dc9d6cdd3f824411a330af1a9a0.mp3str"
+
+[deps]
+
+source_file="res://assets/[Official] Celeste Original Soundtrack - 03 - Resurrections.mp3"
+dest_files=["res://.godot/imported/[Official] Celeste Original Soundtrack - 03 - Resurrections.mp3-02b71dc9d6cdd3f824411a330af1a9a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

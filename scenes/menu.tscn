@@ -1,0 +1,182 @@
+[gd_scene load_steps=16 format=3 uid="uid://dery4cpe8gnyp"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_cu7l2"]
+[ext_resource type="Texture2D" uid="uid://dyd18p1k70sk7" path="res://assets/title.png" id="2_kd17f"]
+[ext_resource type="Texture2D" uid="uid://cpwy8bvofsl72" path="res://assets/play.png" id="3_2j082"]
+[ext_resource type="Texture2D" uid="uid://bvwh0w45pb14p" path="res://assets/Quit.png" id="4_7owj1"]
+[ext_resource type="Texture2D" uid="uid://djthy3krhi6fa" path="res://assets/options.png" id="5_3qtbo"]
+[ext_resource type="Texture2D" uid="uid://cyqxre7sncxsv" path="res://assets/backButton.png" id="6_jsspr"]
+[ext_resource type="Texture2D" uid="uid://cnmsfyampelv5" path="res://assets/howToPlay1.png" id="7_2bvey"]
+[ext_resource type="Texture2D" uid="uid://d2hsaql166w54" path="res://assets/howToPlay2.png" id="8_0lwua"]
+[ext_resource type="FontFile" uid="uid://dem7c3riequdm" path="res://assets/Minecraft.ttf" id="9_0d6q0"]
+[ext_resource type="Texture2D" uid="uid://crd336g8qhurq" path="res://assets/whiteBox1.png" id="10_p204c"]
+[ext_resource type="Texture2D" uid="uid://dwo5oxf1is2ym" path="res://assets/whiteBox2.png" id="11_msdi0"]
+[ext_resource type="Texture2D" uid="uid://j01hw48yy4v5" path="res://assets/music.png" id="12_mlptr"]
+
+[sub_resource type="Animation" id="Animation_thgx8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(416, 32)]
+}
+
+[sub_resource type="Animation" id="Animation_lv0dd"]
+resource_name = "default"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(416, 32), Vector2(416, 45), Vector2(416, 57)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gfeys"]
+_data = {
+"RESET": SubResource("Animation_thgx8"),
+"default": SubResource("Animation_lv0dd")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cu7l2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1648.0
+offset_top = -152.0
+offset_right = 5232.0
+offset_bottom = 2376.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+ignore_rotation = false
+position_smoothing_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 32.0
+offset_right = 1280.0
+offset_bottom = 576.0
+texture = ExtResource("2_kd17f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_gfeys")
+}
+autoplay = "default"
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 616.0
+offset_right = 496.0
+offset_bottom = 724.0
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("3_2j082")
+
+[node name="Quit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1072.0
+offset_top = 616.0
+offset_right = 1200.0
+offset_bottom = 724.0
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("4_7owj1")
+
+[node name="Options" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1776.0
+offset_right = 1904.0
+offset_bottom = 128.0
+texture_normal = ExtResource("5_3qtbo")
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1784.0
+offset_top = 1096.0
+offset_right = 1912.0
+offset_bottom = 1224.0
+texture_normal = ExtResource("6_jsspr")
+
+[node name="BackButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 3704.0
+offset_top = 16.0
+offset_right = 3832.0
+offset_bottom = 144.0
+texture_normal = ExtResource("6_jsspr")
+
+[node name="HowToPlay" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("7_2bvey")
+texture_hover = ExtResource("8_0lwua")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2008.0
+offset_top = 336.0
+offset_right = 2859.0
+offset_bottom = 523.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("9_0d6q0")
+text = "Super Tic-Tac-Toe, is a variation of a tic tac toe where in every square of it, is an another tic tac toe game.
+The game starts by first player putting in one of the 81 squares.
+
+The next player must play in the game whos location correspands to the location that has been chosen by the
+previous player.
+
+For example, if the first player starts with Middle-TopLeft, then the next player has to play in the outside
+top left square.
+
+If the location game is already done then the player gets the pick the location"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1136.0
+offset_top = 1456.0
+offset_right = 1264.0
+offset_bottom = 1584.0
+scale = Vector2(1.5, 1.5)
+toggle_mode = true
+texture_normal = ExtResource("11_msdi0")
+texture_pressed = ExtResource("10_p204c")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 1416.0
+offset_right = 840.0
+offset_bottom = 1544.0
+scale = Vector2(2, 2)
+texture = ExtResource("12_mlptr")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="BackButton2" to="." method="_on_back_button_2_pressed"]
+[connection signal="pressed" from="HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="toggled" from="TextureButton" to="." method="_on_texture_button_toggled"]

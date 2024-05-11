@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl7jjffxviikg"
+path="res://.godot/imported/Terraria Music - Day.mp3-13af285e9922b156caa31c0a45d01ea2.mp3str"
+
+[deps]
+
+source_file="res://assets/Terraria Music - Day.mp3"
+dest_files=["res://.godot/imported/Terraria Music - Day.mp3-13af285e9922b156caa31c0a45d01ea2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

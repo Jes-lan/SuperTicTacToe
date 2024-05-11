@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2ee0u6g2dm57"
+path="res://.godot/imported/Terraria Calamity Mod Music - 1NF3S@!0N - Theme of Crabulon.mp3-43b75bb28f775e89c55842d213801c2b.mp3str"
+
+[deps]
+
+source_file="res://assets/Terraria Calamity Mod Music - 1NF3S@!0N - Theme of Crabulon.mp3"
+dest_files=["res://.godot/imported/Terraria Calamity Mod Music - 1NF3S@!0N - Theme of Crabulon.mp3-43b75bb28f775e89c55842d213801c2b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

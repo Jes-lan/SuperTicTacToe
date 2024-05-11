@@ -1,0 +1,128 @@
+[gd_scene load_steps=3 format=3 uid="uid://cryhnuouoavep"]
+
+[ext_resource type="Texture2D" uid="uid://b7btgyyndcs1j" path="res://assets/glowSmall.png" id="1_cdagq"]
+[ext_resource type="Script" path="res://scripts/screen1.gd" id="1_dju37"]
+
+[node name="insideGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_dju37")
+
+[node name="lol" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="lol"]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 160.0
+offset_right = 663.0
+offset_bottom = 352.0
+
+[node name="ColorRect2" type="ColorRect" parent="lol"]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 160.0
+offset_right = 743.0
+offset_bottom = 352.0
+
+[node name="ColorRect3" type="ColorRect" parent="lol"]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 216.0
+offset_right = 807.0
+offset_bottom = 423.0
+rotation = 1.5708
+
+[node name="ColorRect4" type="ColorRect" parent="lol"]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 288.0
+offset_right = 807.0
+offset_bottom = 495.0
+rotation = 1.5708
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 161.0
+offset_right = 648.0
+offset_bottom = 211.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 162.0
+offset_right = 721.0
+offset_bottom = 210.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 160.0
+offset_right = 800.0
+offset_bottom = 208.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 232.0
+offset_right = 648.0
+offset_bottom = 280.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 232.0
+offset_right = 728.0
+offset_bottom = 280.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton6" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 232.0
+offset_right = 800.0
+offset_bottom = 280.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton7" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 304.0
+offset_right = 648.0
+offset_bottom = 352.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton8" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 304.0
+offset_right = 728.0
+offset_bottom = 352.0
+texture_hover = ExtResource("1_cdagq")
+
+[node name="TextureButton9" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 304.0
+offset_right = 800.0
+offset_bottom = 352.0
+texture_hover = ExtResource("1_cdagq")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="TextureButton6" to="." method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="TextureButton7" to="." method="_on_texture_button_7_pressed"]
+[connection signal="pressed" from="TextureButton8" to="." method="_on_texture_button_8_pressed"]
+[connection signal="pressed" from="TextureButton9" to="." method="_on_texture_button_9_pressed"]
